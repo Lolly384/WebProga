@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html{
+    display: flex;
+    justify-content: center;
+    background-color:  #F5F5F5;;
+}
+body{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 920px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #FFFFFF;
+    height: 100%;
+    border: 3px solid #000000;
+    height: 60px;
+    align-items: center;
+    padding: 0px 40px;
+}
+.header-logo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.header-logo img{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    margin-left: 36px;
+}
+.header-search{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.header-search input{
+    width: 470px;
+    height: 40px;
+    padding-left: 20px;
+}
+.header-search button{
+    border: none;
+    background-color: #FFFFFF;
+}
+.header-search button img{
+    width: 40px;
+    height: 40px;
+}
+.header-links{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.header-links img{
+    width: 40px;
+    height: 40px;
+}
+
+.main-item{
+    border: 3px solid #000000;
+    padding: 20px 80px;
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+}
+.main-item-description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.main-item-description-all{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 900px;
+    hyphens: auto;
+}
+.main-item-description button{
+    margin-top: 30px;
+    background-color: #000000bb;
+    color: #FFFFFF;
+    border: 2px solid #000000;
+    width: 175px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.footer{
+    height: 50px;
+    border: 3px solid #000000;
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.googlePlay{
+    width: 35px;
+}
+.main-item img{
+    width: 500px;
+    height: 500px;
+}
