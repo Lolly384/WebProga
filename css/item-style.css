@@ -12,8 +12,8 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 920px;
+    justify-content: center;
+    gap: 20px;
 }
 .header{
     display: flex;
@@ -25,6 +25,7 @@ body{
     height: 60px;
     align-items: center;
     padding: 0px 40px;
+    margin-top: 10px;
 }
 .header-logo{
     display: flex;
@@ -78,12 +79,13 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 500px;
 }
 .main-item-description-all{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 900px;
+    width: 500px;
     hyphens: auto;
 }
 .main-item-description button{
@@ -117,4 +119,95 @@ body{
 .main-item img{
     width: 500px;
     height: 500px;
+}
+
+@media screen and (max-width: 1440px){
+    body{
+        padding: 5px;
+    }
+   
+}
+@media screen and (max-width: 1120px){
+    .main-item img{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 900px){
+    .header{
+        height: 40px;
+        padding: 0px 10px;
+    }
+    .header-logo h1{
+        font-size: 1em;
+    }
+    .header-logo img{
+        width: 25px;
+        height: 25px;
+        margin-left: 0px;
+    }
+    .header-logo{
+        margin-right: 10px;
+    }
+    
+    .header-search input{
+        width: 230px;
+        height: 20px;
+    }
+    .header-search button img{
+        width: 20px;
+        height: 20px;
+    }
+    .header-links img{
+        width: 20px;
+        height: 20px;
+    }
+    .main-item-description{
+        width: 300px;
+    }
+    .main-item-description-all{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 720px){
+    .main-item{
+        gap: 10px;
+    }
+    .main-item-description h1{
+        font-size: 1em;
+    }
+    .main-item-description{
+        width: 200px;
+    }
+    .main-item-description-all{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 600px){
+    .main-item{
+        padding: 20px 20px;
+    }
+}
+@media screen and (max-width: 530px){
+    
+    .header-links, .header-logo{
+        gap: 2px;
+    }
+    .header-search input{
+        width: 160px;
+        padding-left: 5px;
+    }
+    .footer{
+        padding: 0 5px;
+    }
+    .main-item img{
+        width: 150px;
+        height: 150px;
+    }
+    .main-item-description{
+        width: 180px;
+    }
+    .main-item-description-all{
+        width: 180px;
+    }
 }

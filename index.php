@@ -8,10 +8,10 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-logo">
-        <img src="img/Logo.png" alt="logo">
-        <h1>Lёva</h1>
-      </div>
+        <a href="index.php" class="header-logo">
+          <img src="img/Logo.png" alt="logo">
+          <h1>Lёva</h1>
+        </a>
       <form method="post" class="header-search" action="search.php">
         <input type="text" name="keyword" placeholder="Введите ключевое слово">
         <button><img src="img/search-svgrepo-com.svg" alt=""></button>
@@ -81,7 +81,7 @@
                 echo "</div>";
             }
             echo "</div>";
-            echo "<input type=\"submit\" class=\"menu-accept\" value=\"Применить фильтр\">";
+            echo "<input type=\"submit\" class=\"menu-accept\" value=\"Применить\">";
             echo "</form>";
           }
         ?>

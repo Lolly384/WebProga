@@ -97,7 +97,9 @@ body{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
 }
+
 .main-menu-tip{
     display: flex;
     flex-direction: column;
@@ -184,3 +186,90 @@ body{
     margin-top: 5px;
 }
 
+@media screen and (max-width: 1440px){
+    body{
+        padding: 5px;
+    }
+    .main-list{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1036px){
+    .main-list{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 900px){
+    .header{
+        height: 40px;
+        padding: 0px 10px;
+    }
+    
+    .header-logo img{
+        width: 25px;
+        height: 25px;
+        margin-left: 0px;
+    }
+    .header-logo{
+        margin-right: 10px;
+    }
+    h1{
+        font-size: 1em;
+    }
+    .header-search input{
+        width: 230px;
+        height: 20px;
+    }
+    .header-search button img{
+        width: 20px;
+        height: 20px;
+    }
+    .header-links img{
+        width: 20px;
+        height: 20px;
+    }
+}
+@media screen and (max-width: 650px){
+    .main-menu{
+        padding-left: 5px;
+        width: 100px;
+        height: 420px;
+        padding-top: 2px;
+    }
+    .main-list{
+        margin-left: 115px;
+    }
+    .main-menu-tip, .menu-accept, .main-menu-metal{
+        margin-top: 5px;
+    }
+    .main-menu-tip{
+        gap: 0px;
+    }
+    .menu-accept{
+        width: 90px;
+        font-size: 10px;
+    }
+    
+    .line{
+        margin-left: 0px;
+        width:90px;
+    }
+}
+@media screen and (max-width: 520px){
+    .main-list-elem{
+        width: 200px;
+        height: 300px;
+    }
+    .header-links, .header-logo{
+        gap: 2px;
+    }
+    .header-search input{
+        width: 160px;
+        padding-left: 5px;
+    }
+    .footer{
+        padding: 0 5px;
+    }
+}

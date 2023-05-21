@@ -4,27 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/item-style.css" />
-    <title>Ювелирный магазин</title>
-  </head>
-  <body>
-    <header class="header">
-        <div class="header-logo">
-            <a href="index.php" class="header-logo">
-              <img src="img/Logo.png" alt="logo">
-              <h1>Lёva</h1>
-            </a>
-          </div>
-          <div class="header-search">
-            <input type="text">
-            <button><img src="img/search-svgrepo-com.svg" alt=""></button>
-          </div>
-          <div class="header-links">
-            <img src="img/telegram-svgrepo-com.svg" alt="Telegram">
-            <img src="img/VK_icon.svg" alt="VK">
-          </div>
-    </header>
-    <main class="main">
-      <?php
+    <?php
       if (isset($_GET['id'])) {
         $item_id = $_GET['id'];
     
@@ -45,28 +25,54 @@
         // Подготовленный SQL-запрос с использованием параметров
         $sql = "SELECT * FROM products WHERE id = $item_id";
         $result = $conn->query($sql);
-
-        // Проверка наличия результатов
         if ($result->num_rows > 0) {
           // Продукт найден
           $product = $result->fetch_assoc();
-          echo "<div class=\"main-item\">";
-          echo "<img src=\"" . $product["image"] . "\" alt=\"" . $product["type"] . "\">";
-          echo "<div class=\"main-item-description\">";
-          echo "   <h1>" . $product['name'] . "</h1>";
-          echo "    <p>тип изделия: " . $product['type'] . "</p>";
-          echo "    <p>цвет металла: " . $product['metal_color'] . "</p>";
-          echo "    <div class=\"main-item-description-all\">";
-          echo "        <h1>Описание</h1>";
-          echo "        <p>" . $product['description'] . "</p>";
-          echo "    </div>";
-          echo "</div>" ;
-          echo "</div>";
+          echo "<title>" . $product['name'] . "</title>";
         }
         
       } else {
         // ID предмета не указан
         echo "ID предмета не указан.";
+      }
+     
+    ?>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header-logo">
+        <a href="index.php" class="header-logo">
+          <img src="img/Logo.png" alt="logo">
+          <h1>Lёva</h1>
+        </a>
+      </div>
+      <form method="post" class="header-search" action="search.php">
+        <input type="text" name="keyword" placeholder="Введите ключевое слово">
+        <button><img src="img/search-svgrepo-com.svg" alt=""></button>
+      </form>
+      <div class="header-links">
+        <img src="img/telegram-svgrepo-com.svg" alt="Telegram">
+        <img src="img/VK_icon.svg" alt="VK">
+      </div>
+    
+    </header>
+    <main class="main">
+      <?php
+      // Проверка наличия результатов
+      if ($result->num_rows > 0) {
+        
+        echo "<div class=\"main-item\">";
+        echo "<img src=\"" . $product["image"] . "\" alt=\"" . $product["type"] . "\">";
+        echo "<div class=\"main-item-description\">";
+        echo "   <h1>" . $product['name'] . "</h1>";
+        echo "    <p>тип изделия: " . $product['type'] . "</p>";
+        echo "    <p>цвет металла: " . $product['metal_color'] . "</p>";
+        echo "    <div class=\"main-item-description-all\">";
+        echo "        <h1>Описание</h1>";
+        echo "        <p>" . $product['description'] . "</p>";
+        echo "    </div>";
+        echo "</div>" ;
+        echo "</div>";
       }
       ?>
        
